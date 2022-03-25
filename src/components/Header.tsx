@@ -1,12 +1,21 @@
 // @ts-check
 import {StyledHeader} from './styles/Header.styled';
+import Toggle from './Toggle';
 
-function Header (): JSX.Element {
+interface Header {
+    theme: string;
+    toggleTheme: string;
+  }
+
+
+function Header ({theme, toggleTheme}): JSX.Element {
+
+
+
     return (
         <StyledHeader>
             <div>
-                <label htmlFor="nightDayToggler"><span>Dia/Noche</span></label>
-                <input type="checkbox" id="nightDayToggler"/>
+                <Toggle theme={theme} toggleTheme={toggleTheme} />
             </div>
             <div>
                 <label htmlFor="languageToggler"><span>Lenguaje</span></label>

@@ -1,5 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
+declare module "styled-components" {
+	export interface DefaultTheme{
+		body: string;
+		text: string;
+	}
+}
+
 export const GlobalStyles = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -26,8 +33,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	background: #fff;
+	background: ${({ theme }) => theme.body};
+	color: ${({ theme }) => theme.text};
 	line-height: 1;
+	transition: all 0.5s linear;
 }
 ol, ul {
 	list-style: none;
@@ -44,4 +53,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-`
+`;
+
+export const lightTheme = {
+	  body: "#ffffff",
+	  text: "#121212",
+};
+
+export const darkTheme = {
+	body: "#121212",
+	text: "#ffffff",
+};
