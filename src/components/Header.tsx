@@ -2,20 +2,18 @@
 import {StyledHeader} from './styles/Header.styled';
 import Toggle from './Toggle';
 
-interface Header {
-    theme: string;
-    toggleTheme: string;
+interface HeaderProps {
+    theme: any;
+    toggleTheme: any;
   }
 
 
-function Header ({theme, toggleTheme}): JSX.Element {
-
-
+function Header ( props:HeaderProps ): JSX.Element {
 
     return (
-        <StyledHeader>
+        <StyledHeader id="top">
             <div>
-                <Toggle theme={theme} toggleTheme={toggleTheme} />
+                <Toggle onClick={() => props.toggleTheme } theme={props.theme} toggleTheme={props.toggleTheme} />
             </div>
             <div>
                 <label htmlFor="languageToggler"><span>Lenguaje</span></label>

@@ -5,9 +5,6 @@ export const StyledHeader = styled.header`
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 2rem;
-
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    height: 4rem;
     transition: all 0.3s ease-in-out;
 `

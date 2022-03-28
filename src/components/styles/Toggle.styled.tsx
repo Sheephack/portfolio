@@ -8,7 +8,7 @@ export const StyledToggle = styled.div`
     height: 2rem;
 
     img{
-        width: 50px;
+        width: 40px;
         height: auto;
     }
 `

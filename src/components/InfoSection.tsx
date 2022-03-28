@@ -1,10 +1,13 @@
 //@ts-check
+import { StyledInfoSection } from "./styles/InfoSection.styled";
 
 function InfoSection(): JSX.Element{
     return(
-        <div>
-
-        </div>
+        <StyledInfoSection id="infoSection">
+            <div className="aboutContainer">
+                
+            </div>
+        </StyledInfoSection>
     );
 }
 
