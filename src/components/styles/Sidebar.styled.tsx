@@ -9,6 +9,7 @@ export const StyledSidebar = styled.aside`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    z-index: 1000;
 
     .sideBar__imgContainer{
         width: 100px;

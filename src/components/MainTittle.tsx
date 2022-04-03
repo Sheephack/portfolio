@@ -4,7 +4,8 @@ import portraitDark from '../assets/img/profilePictureDark.png';
 import { StyledMainTittle } from './styles/MainTittle.styled'
 import { useCallback, useEffect, useState} from 'react';
 import InfoSection from './InfoSection';
-import { StyledInfoSection } from './styles/InfoSection.styled';
+import PortfolioSection from './PortfolioSection';
+import Divisor from './Divisor';
 
 interface MTittle {
     theme: any;
@@ -32,8 +33,9 @@ function MainTittle(props:MTittle): JSX.Element{
             </div>
             { props.theme === 'light' ? <img src={portraitDark} alt="Foto de Matias" /> : <img src={portrait} alt="Foto de Matias" /> }
         </StyledMainTittle>
+        <Divisor class="mainDiv"/>
         <InfoSection />
-
+        <PortfolioSection />
         </>
     );
 };

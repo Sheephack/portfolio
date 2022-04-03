@@ -1,6 +1,6 @@
 // @ts-checker
 import {StyledSidebar} from './styles/Sidebar.styled';
-import {FaGithub, FaLinkedinIn, FaHome, FaUser} from 'react-icons/fa';
+import {FaGithub, FaLinkedinIn, FaHome, FaPaintBrush} from 'react-icons/fa';
 import { GiSheep } from 'react-icons/gi'
 import { HashLink } from 'react-router-hash-link';
 
@@ -23,15 +23,15 @@ function Sidebar(): JSX.Element{
                         </div>
                         <div className="box">
                             <HashLink to="#infoSection" className="anchor">
-                                <i><FaUser /></i>
+                                <i><GiSheep /></i>
                                 <div className='tooltip'>Acerca de</div>
                             </HashLink>
                         </div>
                         <div className="box">
-                            <div className="anchor">
-                                <i><GiSheep /></i>
+                            <HashLink to="#portfolioSection" className="anchor">
+                                <i><FaPaintBrush /></i>
                                 <div className='tooltip'>Portfolio</div>
-                            </div>
+                            </HashLink>
                         </div>
                         <div className="box">
                             <a href="https://www.linkedin.com/in/matiaspalladino/" className='anchor'>

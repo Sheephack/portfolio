@@ -8,6 +8,11 @@ declare module "styled-components" {
 		exGlow: string;
 		accent: string;
 		sky: string;
+		buildingFront: string;
+		buildingMiddle: string;
+		clouds: string;
+		buildingBack: string;
+		cityDiv: string;
 	}
 }
 
@@ -43,6 +48,7 @@ body {
 	line-height: 1;
 	transition: all 0.5s linear;
 	font-family: 'Lexend Deca', sans-serif;
+	overflow-x: hidden;
 }
 html{
 	scroll-behavior: smooth;
@@ -78,7 +84,12 @@ export const lightTheme = {
 	  sidebar: "#fff",
 	  exGlow: "0 0 10px rgba(0 0 0 / 20%)",
 	  accent: "#6930D2",
-	  sky: "linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%)",
+	  sky: "linear-gradient(to bottom, #90dffe 0%,#38a3d1 85%, #212B30 15%)",
+	  buildingFront: "invert(0%) sepia(100%) saturate(101%) hue-rotate(156deg) brightness(100%) contrast(100%)",
+	  buildingMiddle: "hue-rotate(257deg) brightness(0.5) saturate(0.5)",
+	  buildingBack: "hue-rotate(266deg) brightness(1.5) saturate(0.5)",
+	  clouds: "hue-rotate(270deg)",
+	  cityDiv: "#212B30"
 };
 
 export const darkTheme = {
@@ -87,5 +98,10 @@ export const darkTheme = {
 	sidebar: "#202020",
 	exGlow: "0 0 10px rgba(50 50 50 / 100%)",
 	accent: "#FFC715",
-	sky: "linear-gradient(to bottom, #090401 50%,#4B1D06 100%)",
+	sky: "linear-gradient(to bottom,#090401 25%,#4B1D06 50%,#261609 25%)",
+	buildingFront: "invert(0%) sepia(27%) saturate(50%) hue-rotate(90deg) brightness(85%) contrast(100%)",
+	buildingMiddle: "hue-rotate(84deg) brightness(0.5)",
+	buildingBack: "hue-rotate(90deg)",
+	clouds: "hue-rotate(46deg) saturate(1.3) brightness(0.5)",
+	cityDiv: "#261609"
 };
